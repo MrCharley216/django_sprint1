@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 
 app_name = 'blog'
@@ -43,7 +44,7 @@ posts = [
                 Весь этот день я хлопотал  около вещей: укрывал и
                 укутывал их, чтобы не испортились от дождя.''',
     },
-] 
+]
 
 
 def index(request):

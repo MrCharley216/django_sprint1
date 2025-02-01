@@ -11,3 +11,4 @@ def rules(request):
     template = 'pages/rules.html'
     context = {}
     return render(request, template, context)
+    

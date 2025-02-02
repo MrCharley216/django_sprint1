@@ -20,10 +20,7 @@
               Категория: <a href="{% url 'blog:category_posts' post.category %}">{{ post.category }}</a>
             </li>
           </ul>          
-          <!-- Первые 10 слов -->
-          <p>
-            {{ post.text|truncatewords:10 }}
-          </p>
+          {{ post.text|linebreaksbr|truncatewords:10 }}
           <a href="{% url 'blog:post_detail' post.id %}">Читать полный текст</a>
           <hr>
         {% endfor %}  

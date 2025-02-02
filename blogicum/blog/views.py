@@ -66,4 +66,4 @@ def category_posts(request, category_slug):
     for post in posts:
         if post['category'] == category_slug:
             context = {'post': post}
-            return render(request, template, context)    
+            return render(request, template, context)

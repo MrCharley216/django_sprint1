@@ -5,16 +5,16 @@
 {% endblock %}	
 
 {% block content %}
-  <h1>Лента записей</h1>                        
-  <hr>
-  <article>
-    {% for post in post %}
+  <h1>Лента записей</h1>
+  {% for post in post %}
+    <hr>
+    <article>
       <ul>
         <li>
-          {{ post.location }}
+          Место: {{ post.location }}
         </li>
         <li>
-          {{ post.date }}
+          Дата: {{ post.date }}
         </li>
         <li>
           Категория: <a href="{% url 'blog:category_posts' post.category %}">{{ post.category }}</a>
@@ -22,7 +22,6 @@
       </ul>          
       {{ post.text|linebreaksbr|truncatewords:10 }}
       <a href="{% url 'blog:post_detail' post.id %}">Читать полный текст</a>
-      <hr>
-    {% endfor %}  
-  </article>
+    </article>
+  {% endfor %}
 {% endblock %}
